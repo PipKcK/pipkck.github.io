@@ -20,10 +20,11 @@
   */
   --hue: 255;
   --first-color: #00A08D/*#6b3df5/*hsl(255, 90%, 60%)*/;
-  --first-color-alt: #6133eb/*hsl(255, 82%, 56%)*/;
+  --first-color-alt: #00685b/*hsl(255, 82%, 56%)*/;
   --first-color-light: #b8c9e0/*hsl(255, 40%, 80%)*/;
   --text-color-light: #9591a1/*hsl(255, 8%, 60%)*/;
   --white-color: #ffffff/*hsl(0, 0%, 100%)*/;
+  --alt-white-color: #00544a/*hsl(0, 0%, 97%)*/;
 
   --title-color: #d4d0e2/*hsl(255, 24%, 85%)*/;
   --text-color: #afacb9/*hsl(255, 8%, 70%)*/;
@@ -91,6 +92,7 @@ body {
   background-color: var(--body-color);
   color: var(--text-color);
   transition: background-color .4s;
+  zoom: 75%;
 }
 
 input,
@@ -175,6 +177,7 @@ body.dark-theme {
 }
 
 /*=============== REUSABLE CSS CLASSES ===============*/
+
 .container {
   max-width: 1120px;
   margin-inline: 1.5rem;
@@ -407,6 +410,10 @@ body.dark-theme {
 }
 
 /*=============== ABOUT ===============*/
+.about {
+  transform: translate(0px, -80px);
+}
+
 .about__page {
   padding-bottom: 4rem;
 }
@@ -920,6 +927,20 @@ body.dark-theme {
 
 /* For large devices */
 @media screen and (min-width: 1150px) {
+
+  .animated-text{
+    transform: translate(-10rem, 0);
+    font-family: 'Space Mono', monospace !important;
+    color: white !important;
+    padding: 0rem clamp(1rem, 2vw, 3rem) !important;
+    border-radius: clamp(0.4rem, 0.75vw, 1rem) !important;
+  }
+  
+  .animated-text:hover {
+    background-color: white;
+    color: black !important;
+  }
+
   .container {
     margin-inline: auto;
   }
