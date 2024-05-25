@@ -139,7 +139,7 @@ img {
 body.dark-theme {
   --title-color: #241f33/*hsl(255, 24%, 16%)*/;
   --text-color: #6e6a7c/*hsl(255, 8%, 45%)*/;
-  --body-color: #ffffff/*hsl(0, 0%, 100%)*/;
+  --body-color: #a4dad3/*hsl(0, 0%, 100%)*/;
   --container-color: #ffffff/*hsl(0, 0%, 100%)*/;
   --shadow-color: #acacac/*hsla(255, 90%, 30%, .1)*/;
 }
@@ -178,7 +178,7 @@ body.dark-theme {
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 
-.container {
+.container:not(.nav, .home__container) {
   max-width: 1120px;
   margin-inline: 1.5rem;
 }
@@ -241,6 +241,8 @@ body.dark-theme {
 }
 
 .nav {
+  font-size: 130%;
+  margin-inline: 5rem;
   position: relative;
   height: var(--header-height);
   display: flex;
@@ -928,20 +930,20 @@ body.dark-theme {
 /* For large devices */
 @media screen and (min-width: 1150px) {
 
-  .animated-text{
-    transform: translate(-10rem, 0);
+  .nav__logo{
+    /*transform: translate(-25vw, 0);*/
+    margin-left: 1vw !important;
     font-family: 'Space Mono', monospace !important;
-    color: white !important;
     padding: 0rem clamp(1rem, 2vw, 3rem) !important;
     border-radius: clamp(0.4rem, 0.75vw, 1rem) !important;
   }
   
-  .animated-text:hover {
-    background-color: white;
+  .nav__logo:hover {
+    background-color: #c9e9e5;
     color: black !important;
   }
 
-  .container {
+  .container:not(.nav, .home__container) {
     margin-inline: auto;
   }
 
@@ -987,10 +989,11 @@ body.dark-theme {
   }
 
   .home__rectangle {
-    width: 30vw;
+    width: 30%;
     height: 100%;
   }
   .home__container {
+    margin-inline: 15%;
     position: relative;
     grid-template-columns: 500px 300px;
     align-items: center;
