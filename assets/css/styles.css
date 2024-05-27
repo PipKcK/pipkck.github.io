@@ -597,7 +597,7 @@ body.dark-theme {
   top: 1.25rem;
   right: 1.25rem;
   font-size: 2rem;
-  color: var(--first-color);
+  color: black;
   transition: transform .4s;
 }
 
@@ -747,8 +747,35 @@ body.dark-theme {
   bottom: -2rem;
   left: 0;
   font-size: 1rem;
-  font-weight: var(--font-semi-bold);
   color: var(--title-color);
+}
+
+.contact__label .tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.contact__label .tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%; /* Position the tooltip above the icon */
+  left: 50%;
+  margin-left: -60px; /* Use half of the width to center the tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.contact__label .tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }
 
 /*=============== FOOTER ===============*/
@@ -1077,6 +1104,7 @@ body.dark-theme {
     padding-block: 3.5rem;
   }
   .footer__content {
+    font-size: 1.3rem;
     grid-template-columns: 1fr 2fr 1fr;
     align-items: center;
   }
@@ -1088,6 +1116,10 @@ body.dark-theme {
   }
   .footer__social {
     column-gap: 1.5rem;
+  }
+
+  .footer__social-link {
+    font-size: 2rem;
   }
 
   .scrollup {
